@@ -1,0 +1,33 @@
+.game-box-wrapepr .game-box{
+	min-height: 150px;
+	background-color: #e6e5e5;
+	margin-top: 30px;
+    margin-right: 36px;
+}
+.score-block, .start-block{
+	padding: 20px 15px;
+}
+.score-block h6{
+	font-size: 13px;
+}
+.active{
+	background-color: #00c04d !important;
+    color: #fff;
+}
+
+
+.btn-green{
+    border-radius: 3px;
+    border: 1px solid #00c04d;
+    font-size: 14px;
+    font-weight: 500;
+    color: #00c04d;
+    padding: 7px 27px;
+    cursor: pointer;
+    float: left;
+}
+
+.btn-green:hover{
+	background-color: #00c04d;
+	color: #ffffff;
+}

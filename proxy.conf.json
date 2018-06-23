@@ -1,0 +1,10 @@
+{
+  "/api": {
+    "target": "https://alpha.adeptdc.ai:8200",
+    "secure": false,
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "changeOrigin": true
+  }
+}

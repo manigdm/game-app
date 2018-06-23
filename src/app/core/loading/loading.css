@@ -1,0 +1,12 @@
+.loader {
+    margin: 0 auto;
+    width: 60px;
+    position: absolute;
+    display: block;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    transform: translate3d(0, -50%, 0);
+    text-align: center;
+    top: 50%;
+}

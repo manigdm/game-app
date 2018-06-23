@@ -1,0 +1,53 @@
+<section class="container">
+   <div class="main-container">
+   		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+   			<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+   				<label>Select game level</label>
+	   			<ng-select class="select-box" name="game_level" [(ngModel)]="game['level']" (change)="onSelectLevel();">
+					<ng-option *ngFor="let gameLevel of gameLevels" [value]="gameLevel.label">{{gameLevel.label}}</ng-option>
+				</ng-select>
+   			</div>
+   			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 game-box-wrapepr">
+   				<div *ngIf="game['level'] == 'Easy'" class="geme-level-block">
+	   				<div class="row">
+	   					<div class="col-lg-12 col-md-12 start-block">
+	   						<button *ngIf="timeLeft == '60'" class="btn btn-green pull-left" (click)="startGame();">Start</button>
+	   						<button *ngIf="timeLeft < '60'" class="btn btn-green pull-left" (click)="reStart();">Re Start</button>
+	   						<h6 class="text-right pull-right">Timmer: {{timeLeft}}</h6>
+	   					</div>
+	   				</div>
+	   				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	   					<div class="row">
+	   						<div class="col-lg-3 col-md-3 game-box" [ngClass]="{'active':gameEasy.active}" *ngFor="let gameEasy of gameEasy ; let idx = index" (click)="onCheckScore(gameEasy);">
+	   							<div class="score-block">
+	   								<h6>{{gameEasy.score[0].slug}}: {{gameEasy.score[0].value}}</h6>
+	   								<h6>{{gameEasy.highscore[0].slug}}: {{gameEasy.highscore[0].value}}</h6>
+	   							</div>
+	   						</div>
+	   					</div>
+	   				</div>
+   				</div>
+   				<div *ngIf="game['level'] == 'Medium'" class="geme-level-block">
+	   				<div class="row">
+	   					<div class="col-lg-12 col-md-12 start-block">
+	   						<button *ngIf="timeLeft == '60'" class="btn btn-green pull-left" (click)="startGame();">Start</button>
+	   						<button *ngIf="timeLeft < '60'" class="btn btn-green pull-left" (click)="reStart();">Re Start</button>
+	   						<h6 class="text-right pull-right">Timmer: {{timeLeft}}</h6>
+	   					</div>
+	   				</div>
+	   				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	   					<div class="row">
+	   						<div class="col-lg-2 col-md-2 game-box" [ngClass]="{'active':gameMedium.active}" *ngFor="let gameMedium of gameMedium ; let idx = index" (click)="onCheckScore(gameMedium);">
+	   							<div class="score-block">
+	   								<h6>{{gameMedium.score[0].slug}}: {{gameMedium.score[0].value}}</h6>
+	   								<h6>{{gameMedium.highscore[0].slug}}: {{gameMedium.highscore[0].value}}</h6>
+	   							</div>
+	   						</div>
+	   					</div>
+	   				</div>
+   				</div>
+   			</div>
+   		</div>
+	</div>
+</section>
+

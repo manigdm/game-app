@@ -1,0 +1,10 @@
+.header-wrapper{
+	border-bottom: 0 none;
+    box-shadow: 0 0 6px #868383;
+    background: #fff
+}
+
+.header-wrapper .brand{
+	padding: 15px 0;
+	font-weight: 400;
+}
